@@ -1,7 +1,8 @@
 // https://leetcode.com/problems/find-in-mountain-array/
 // Leetcode HARD😎😎
 
-package com.parthesh.arrays.search.questions;
+package com.parthesh.arrays.questions;
+
 
 public class FindInMountainArray {
 

@@ -1,7 +1,8 @@
 // https://www.geeksforgeeks.org/find-position-element-sorted-array-infinite-numbers/
 //amazon interview question
 
-package com.parthesh.arrays.search.questions;
+package com.parthesh.arrays.questions;
+
 
 public class BinarySearchInfiniteArray {
 

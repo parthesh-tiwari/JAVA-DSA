@@ -1,7 +1,8 @@
 // https://www.geeksforgeeks.org/find-rotation-count-rotated-sorted-array/
 // an array is rotated pivot times
 
-package com.parthesh.arrays.search.questions;
+package com.parthesh.arrays.questions;
+
 
 public class RotationCountSortedArray {
 

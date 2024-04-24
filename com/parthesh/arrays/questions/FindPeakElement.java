@@ -1,6 +1,7 @@
 // https://leetcode.com/problems/find-peak-element/
 
-package com.parthesh.arrays.search.questions;
+package com.parthesh.arrays.questions;
+
 
 public class FindPeakElement {
 

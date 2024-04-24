@@ -1,14 +1,12 @@
-//https://leetcode.com/problems/search-in-rotated-sorted-array/description/
-// Google , Amazon interview question
+package com.parthesh.arrays.questions;
 
-package com.parthesh.arrays.search.questions;
 
-public class RotatedBinarySearch {
+public class RotatedBSDuplicateValues {
 
     public static void main(String[] args) {
 
-        int[] nums = { 3, 5, 1 };
-        int target = 3;
+        int[] nums = { 2, 2, 9, 2 };
+        int target = 9;
 
         System.out.println(findElement(nums, target));
 
@@ -16,12 +14,11 @@ public class RotatedBinarySearch {
 
     static int findElement(int[] nums, int target) {
 
-        int pivot = findPivot(nums);
+        int pivot = findPivotWithDuplicateValues(nums);
 
         if (pivot == -1) {
             return binarySearch(nums, target, 0, nums.length - 1);
         }
-
         if (nums[pivot] == target) {
             return pivot;
         }
@@ -34,7 +31,7 @@ public class RotatedBinarySearch {
 
     }
 
-    static int findPivot(int[] nums) {
+    static int findPivotWithDuplicateValues(int[] nums) {
 
         int start = 0;
         int end = nums.length - 1;
@@ -51,10 +48,22 @@ public class RotatedBinarySearch {
                 return mid - 1;
             }
 
-            if (nums[mid] <= nums[start]) {
-                end = mid - 1;
-            } else {
+            // Repetition of elements will impact here on the logic
+            if (nums[mid] == nums[start] && nums[mid] == nums[end]) {
+
+                if (nums[start] > nums[start + 1]) {
+                    return start;
+                }
+                start++;
+                if (nums[end] < nums[end - 1]) {
+                    return end - 1;
+                }
+                end--;
+            } else if (nums[start] < nums[mid] || (nums[start] == nums[mid] && nums[mid] < nums[end])) {
                 start = mid + 1;
+            } else {
+                end = mid - 1;
+
             }
 
         }
@@ -64,7 +73,6 @@ public class RotatedBinarySearch {
     static int binarySearch(int[] nums, int target, int start, int end) {
 
         while (start <= end) {
-
             int mid = start + (end - start) / 2;
 
             if (nums[mid] == target) {
@@ -73,14 +81,13 @@ public class RotatedBinarySearch {
 
             if (target < nums[mid]) {
                 end = mid - 1;
-            } else {
-
-                start = mid + 1;
             }
 
+            if (target > nums[mid]) {
+                start = end + 1;
+            }
         }
         return -1;
-
     }
 
 }

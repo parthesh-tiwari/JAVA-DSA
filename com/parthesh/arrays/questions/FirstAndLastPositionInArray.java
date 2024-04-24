@@ -2,7 +2,8 @@
 // facebook interview question
 
 
-package com.parthesh.arrays.search.questions;
+package com.parthesh.arrays.questions;
+
 
 import java.util.Arrays;
 

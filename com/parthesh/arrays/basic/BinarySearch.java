@@ -1,37 +1,38 @@
-package com.parthesh.arrays.search;
+package com.parthesh.arrays.basic;
 
 import java.util.Scanner;
 
-public class CeilingBinarySearch {
+public class BinarySearch {
 
     public static void main(String[] args) {
 
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("Enter the length of the array:");
+        System.out.println("Enter the length of array:");
         int length = scanner.nextInt();
 
         int[] array = new int[length];
 
-        System.out.println("Enter the elements of the array:");
+        System.out.println("Enter the array elements in ascending order:");
 
-        for (int i = 0; i < array.length; i++) {
+        for (int i = 0; i < length; i++) {
             array[i] = scanner.nextInt();
         }
 
         System.out.println("Enter the target element:");
         int target = scanner.nextInt();
 
-        System.out.println("The ceiling of the array is: " + binarySearch(array, target));
+        int answer = binarySearch(array, target);
 
+        if (answer == -1) {
+            System.out.println("Target element is not found");
+        } else {
+            System.out.println("Target element is not found index: " + answer);
+        }
         scanner.close();
     }
 
     static int binarySearch(int[] array, int target) {
-
-        if (target > array[array.length - 1]) {
-            return -1;
-        }
 
         int start = 0;
         int end = array.length - 1;
@@ -41,7 +42,7 @@ public class CeilingBinarySearch {
             int mid = start + (end - start) / 2;
 
             if (array[mid] == target) {
-                return array[mid];
+                return mid;
             }
 
             if (target < array[mid]) {
@@ -51,9 +52,11 @@ public class CeilingBinarySearch {
             if (target > array[mid]) {
                 start = mid + 1;
             }
+
         }
 
-        // retuern the ceiling value
-        return array[start];
+        return -1;
+
     }
+
 }

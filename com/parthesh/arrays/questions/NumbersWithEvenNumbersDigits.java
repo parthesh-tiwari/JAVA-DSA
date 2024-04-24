@@ -1,6 +1,7 @@
 // https://leetcode.com/problems/find-numbers-with-even-number-of-digits/
 
-package com.parthesh.arrays.search.questions;
+package com.parthesh.arrays.questions;
+
 
 public class NumbersWithEvenNumbersDigits {
 

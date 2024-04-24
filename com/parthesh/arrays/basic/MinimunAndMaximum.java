@@ -1,4 +1,4 @@
-package com.parthesh.arrays.search;
+package com.parthesh.arrays.basic;
 
 import java.util.Scanner;
 

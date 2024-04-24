@@ -1,6 +1,6 @@
 // https://leetcode.com/problems/richest-customer-wealth/description/
 
-package com.parthesh.arrays.search.questions;
+package com.parthesh.arrays.questions;
 
 import java.util.Scanner;
 

@@ -1,6 +1,7 @@
 // https://leetcode.com/problems/find-smallest-letter-greater-than-target
 
-package com.parthesh.arrays.search.questions;
+package com.parthesh.arrays.questions;
+
 
 public class SmallestLetterGreaterThanTarget {
 

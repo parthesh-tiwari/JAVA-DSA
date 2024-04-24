@@ -1,6 +1,6 @@
 // https://leetcode.com/problems/peak-index-in-a-mountain-array/description/
 
-package com.parthesh.arrays.search.questions;
+package com.parthesh.arrays.questions;
 
 public class PeakInMountainArray {
 

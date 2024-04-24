@@ -1,4 +1,4 @@
-package com.parthesh.arrays;
+package com.parthesh.arrays.basic;
 
 import java.util.Arrays;
 
