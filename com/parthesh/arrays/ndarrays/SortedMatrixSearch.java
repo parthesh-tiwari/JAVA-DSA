@@ -74,7 +74,6 @@ public class SortedMatrixSearch {
         else {
             return binarySearchInMatrix(matrix, rStart + 1, cMid + 1, cols, target);
         }
-
     }
 
     static int[] binarySearchInMatrix(int[][] matrix, int row, int cStart, int cEnd, int target) {
