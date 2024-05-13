@@ -1,4 +1,4 @@
-//solved using minmum distance from the ends pattern
+//solved using minmum distance from the ends pattern and finally n - disatnce
 
 package com.parthesh.patterns;
 
