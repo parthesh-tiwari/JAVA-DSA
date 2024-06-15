@@ -1,3 +1,6 @@
+//Pattern: Pick Not pickup 
+//count sum once, count all with sum, print where subseq sunm = required sum
+
 package com.parthesh.recursion.arrayquestions;
 
 import java.util.ArrayList;
